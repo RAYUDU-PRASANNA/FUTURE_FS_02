@@ -25,7 +25,7 @@ function ContactForm() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/leads", {
+      await axios.post("http://future-fs-02-jmdw.onrender.com/api/leads", {
   ...form,
   source: "website"
 });

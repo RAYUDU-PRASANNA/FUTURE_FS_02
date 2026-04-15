@@ -9,6 +9,16 @@ function Admin() {
 
   const token = localStorage.getItem("token");
 
+const fetchData = async () => {
+  try {
+    const res = await fetch("https://future-fs-02-jmdw.onrender.com/api/leads");
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
   useEffect(() => {
   fetchData();
 }, [fetchData]);
@@ -16,7 +26,7 @@ function Admin() {
   // 🔹 Fetch Leads
   const fetchLeads = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/leads", {
+      const res = await axios.get("http://future-fs-02-jmdw.onrender.com/api/leads", {
         headers: { Authorization: token },
       });
 

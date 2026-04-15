@@ -19,7 +19,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://future-fs-02-jmdw.onrender.com/api/auth/login",
         form
       );
 
